@@ -116,6 +116,7 @@ transfer.  For example:
         multipart_threshold=8 * 1024 * 1024,
         max_concurrency=10,
         num_download_attempts=10,
+        max_bandwidth=150KB/s
     )
     transfer = S3Transfer(client, config)
     transfer.upload_file('/tmp/foo', 'bucket', 'key')
@@ -167,13 +168,14 @@ class TransferConfig(S3TransferConfig):
     }
 
     def __init__(self,
-                 multipart_threshold=8 * MB,
+                 multipart_threshold=5 * MB,
                  max_concurrency=10,
-                 multipart_chunksize=8 * MB,
+                 multipart_chunksize=5 * MB,
                  num_download_attempts=5,
                  max_io_queue=100,
                  io_chunksize=256 * KB,
-                 use_threads=True):
+                 use_threads=True,
+                 max_bandwidth=None):
         """Configuration object for managed S3 transfers
 
         :param multipart_threshold: The transfer size threshold for which
@@ -217,6 +219,7 @@ class TransferConfig(S3TransferConfig):
             num_download_attempts=num_download_attempts,
             max_io_queue_size=max_io_queue,
             io_chunksize=io_chunksize,
+            max_bandwidth=max_bandwidth,
         )
         # Some of the argument names are not the same as the inherited
         # S3TransferConfig so we add aliases so you can still access the
