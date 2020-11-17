@@ -11,7 +11,7 @@
 .. _aws-boto-ec2-example-security-group:
 
 ##########################################
-Working with Security Groups in Amazon EC2
+Working with security groups in Amazon EC2
 ##########################################
 
 This Python example shows you how to:
@@ -22,7 +22,7 @@ This Python example shows you how to:
 
 * Delete an existing security group
 
-The Scenario
+The scenario
 ============
 
 An Amazon EC2 security group acts as a virtual firewall that controls the traffic for one or more instances. 
@@ -34,13 +34,13 @@ In this example, Python code is used to perform several Amazon EC2 operations in
 The code uses the AWS SDK for Python to manage IAM access keys using these methods of the EC2 
 client class:
 
-* `describe_security_groups <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_security_groups>`_.
+* `describe_security_groups <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_security_groups>`_.
 
-* `authorize_security_group_ingress <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.authorize_security_group_ingress>`_.
+* `authorize_security_group_ingress <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.authorize_security_group_ingress>`_.
 
-* `create_security_group <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.create_security_group>`_.
+* `create_security_group <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.create_security_group>`_.
 
-* `delete_security_group <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.delete_security_group>`_.
+* `delete_security_group <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.delete_security_group>`_.
 
 For more information about the Amazon EC2 security groups, see 
 `Amazon EC2 Amazon Security Groups for Linux Instances <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html>`_ 
@@ -50,12 +50,12 @@ in the *Amazon EC2 User Guide for Windows Instances*.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Tasks
+Prerequisite tasks
 ==================
 
 To set up and run this example, you must first configure your AWS credentials, as described in :doc:`quickstart`.
 
-Describe Security Groups
+Describe security groups
 =======================
 Describe one or more of your security groups.
 
@@ -68,7 +68,7 @@ in the *Amazon Virtual Private Cloud User Guide*.
 The example below shows how to:
  
 * Describe a Security Group using 
-  `describe_security_groups <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_security_groups>`_.
+  `describe_security_groups <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_security_groups>`_.
 
 Example
 -------
@@ -86,7 +86,7 @@ Example
     except ClientError as e:
         print(e)
 
-Create a Security Group and Rules
+Create a security group and rules
 =================================
 
 * Create a security group.
@@ -99,10 +99,10 @@ Create a Security Group and Rules
 The example below shows how to:
  
 * Create a Security Group using 
-  `create_security_group <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.create_security_group>`_.
+  `create_security_group <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.create_security_group>`_.
 
 * Add an ingress rule to a security group using 
-  `authorize_security_group_ingress <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.authorize_security_group_ingress>`_.
+  `authorize_security_group_ingress <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.authorize_security_group_ingress>`_.
  
 Example
 -------
@@ -140,7 +140,7 @@ Example
     except ClientError as e:
         print(e)
 
-Delete a Security Group
+Delete a security group
 =======================
 
 If you attempt to delete a security group that is associated with an instance, or is referenced by 
@@ -150,7 +150,7 @@ in EC2-VPC.
 The example below shows how to:
  
 * Delete a security group using 
-  `delete_security_group <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.delete_security_group>`_.
+  `delete_security_group <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.delete_security_group>`_.
  
 Example
 -------

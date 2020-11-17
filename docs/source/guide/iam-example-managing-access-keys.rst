@@ -11,12 +11,12 @@
 .. _aws-boto3-iam-managing-access-keys:   
 
 ########################
-Managing IAM Access Keys
+Managing IAM access keys
 ########################
 
 This Python example shows you how to manage the access keys of your users.
 
-The Scenario
+The scenario
 ============
 
 Users need their own access keys to make programmatic calls to AWS from the Amazon Web Services (AWS) 
@@ -27,15 +27,15 @@ status is Active, which means the user can use the access key for API calls.
 In this example, Python code is used to manage access keys in IAM. The code uses the AWS SDK for Python 
 to manage IAM access keys using these methods of the IAM client class:
 
-* `create_access_key <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.create_access_key>`_.
+* `create_access_key <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.create_access_key>`_.
 
-* `paginate(UserName='IAM_USER_NAME') <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.paginate>`_.
+* `paginate(UserName='IAM_USER_NAME') <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.paginate>`_.
 
-* `get_access_key_last_used <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.get_access_key_last_used>`_.
+* `get_access_key_last_used <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.get_access_key_last_used>`_.
 
-* `update_access_key <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.update_access_key>`_.
+* `update_access_key <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.update_access_key>`_.
 
-* `delete_access_key <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.delete_access_key>`_.
+* `delete_access_key <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.delete_access_key>`_.
 
 
 For more information about IAM access keys, see `Managing Access Keys <http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`_ 
@@ -43,12 +43,12 @@ in the *IAM User Guide*.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 To set up and run this example, you must first configure your AWS credentials, as described in :doc:`quickstart`.
 
-Create Access Keys for a User
+Create access keys for a user
 =============================
 
 Create a new AWS secret access key and corresponding AWS access key ID for the specified user. The 
@@ -57,7 +57,7 @@ default status for new keys is :code:`Active`.
 The example below shows how to:
  
 * Create a new AWS access key using 
-  `create_access_key <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.create_access_key>`_.
+  `create_access_key <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.create_access_key>`_.
  
 Example
 -------
@@ -76,7 +76,7 @@ Example
 
     print(response['AccessKey'])
 
-List a User's Access Keys
+List a user's access keys
 =========================
 
 List information about the access key IDs associated with the specified IAM user. If there are none, 
@@ -89,7 +89,7 @@ you can use this action to manage root credentials even if the AWS account has n
 The example below shows how to:
  
 * List a user's access keys using 
-  `paginate(UserName='IAM_USER_NAME') <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.paginate>`_.
+  `paginate(UserName='IAM_USER_NAME') <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.paginate>`_.
   
 For more information about paginators see, :doc:`paginators`
 
@@ -109,7 +109,7 @@ Example
         print(response)
 
 
-Get the Access Key Last Used
+Get the access key last used
 ============================
 
 Get information about when the specified access key was last used. The information includes the 
@@ -119,7 +119,7 @@ made with that key.
 The example below shows how to:
  
 * Get the access key last used using 
-  `get_access_key_last_used <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.get_access_key_last_used>`_.
+  `get_access_key_last_used <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.get_access_key_last_used>`_.
 
 Example
 -------
@@ -141,7 +141,7 @@ Example
 
 
  
-Update Access Key Status
+Update access key status
 ========================
 
 Change the status of the specified access key from Active to Inactive, or vice versa. This action 
@@ -150,7 +150,7 @@ can be used to disable a user's key as part of a key rotation work flow.
 The example below shows how to:
  
 * Change the status of an access key to :code:`Active` using 
-  `update_access_key <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.update_access_key>`_.
+  `update_access_key <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.update_access_key>`_.
  
 Example
 -------
@@ -170,7 +170,7 @@ Example
     )
 
     
-Delete an Access Key
+Delete an access key
 ====================
 
 Delete the access key pair associated with the specified IAM user.
@@ -182,7 +182,7 @@ use this action to manage root credentials even if the AWS account has no associ
 The example below shows how to:
  
 * Delete an access key using 
-  `delete_access_key <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.delete_access_key>`_.
+  `delete_access_key <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.delete_access_key>`_.
   
 Example
 -------

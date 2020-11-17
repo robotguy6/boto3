@@ -11,7 +11,7 @@
 .. _aws-boto3-cw-using-alarms:   
 
 ########################################
-Using Alarm Actions in Amazon CloudWatch
+Using alarm actions in Amazon CloudWatch
 ########################################
 
 This Python example shows you how to:
@@ -20,7 +20,7 @@ This Python example shows you how to:
 
 * Disable a CloudWatch alarm action
 
-The Scenario
+The scenario
 ============
 
 Using alarm actions, you can create alarms that automatically stop, terminate, reboot, or recover 
@@ -28,12 +28,12 @@ your Amazon EC2 instances. You can use the stop or terminate actions when you no
 instance to be running. You can use the reboot and recover actions to automatically reboot those instances.
 
 In this example, Python code is used to define an alarm action in CloudWatch that 
-triggers the reboot of an Amazon EC2 instance. The code uses the uses AWS SDK for Python to manage 
+triggers the reboot of an Amazon EC2 instance. The code uses the AWS SDK for Python to manage
 Amazon EC2 instances using these methods of the CloudWatch client class:
 
-* `put_metric_alarm <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
+* `put_metric_alarm <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
 
-* `disable_alarm_actions <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.disable_alarm_actions>`_.
+* `disable_alarm_actions <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.disable_alarm_actions>`_.
 
 
 For more information about CloudWatch alarm actions, see 
@@ -42,7 +42,7 @@ in the *Amazon CloudWatch User Guide*.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 * Configure your AWS credentials, as described in :doc:`quickstart`.
@@ -75,7 +75,7 @@ Prerequisite Task
            ]
         }
  
-Create and Enable Actions on an Alarm
+Create and enable actions on an alarm
 =====================================
 
 Create or update an alarm and associate it with the specified metric. Optionally, this operation 
@@ -91,7 +91,7 @@ the previous configuration of the alarm.
 The example below shows how to:
  
 * Create an alarm and enable actions using 
-  `put_metric_alarm <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
+  `put_metric_alarm <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
  
 Example
 -------
@@ -127,7 +127,7 @@ Example
         Unit='Seconds'
     )
 
-Disable Actions on an Alarm
+Disable actions on an alarm
 ===========================
 
 Disable the actions for the specified alarms. When an alarm's actions are disabled, the alarm actions 
@@ -136,7 +136,7 @@ do not execute when the alarm state changes.
 The example below shows how to:
  
 * Disable metric alarm actions using 
-  `disable_alarm_actions <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.disable_alarm_actions>`_.
+  `disable_alarm_actions <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.disable_alarm_actions>`_.
  
 Example
 -------

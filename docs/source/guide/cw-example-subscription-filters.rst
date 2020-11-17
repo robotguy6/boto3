@@ -11,12 +11,12 @@
 .. _aws-boto3-cw-subscription-filters:   
 
 ####################################################
-Using Subscription Filters in Amazon CloudWatch Logs
+Using subscription filters in Amazon CloudWatch Logs
 ####################################################
 
 This Python example shows you how to create and delete filters for log events in CloudWatch Logs.
 
-The Scenario
+The scenario
 ============
 
 Subscriptions provide access to a real-time feed of log events from CloudWatch Logs and deliver that 
@@ -26,14 +26,14 @@ which log events are delivered to your AWS resource.
 
 In this example, Python code is used to list, create, and delete a subscription 
 filter in CloudWatch Logs. The destination for the log events is a Lambda function. 
-The code uses the uses AWS SDK for Python to manage subscription filters using these methods of the 
+The code uses the AWS SDK for Python to manage subscription filters using these methods of the
 CloudWatchLogs client class:
 
-* `get_paginator('describe_subscription_filters') <https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.get_paginator>`_.
+* `get_paginator('describe_subscription_filters') <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.get_paginator>`_.
 
-* `put_subscription_filter <https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.put_subscription_filter>`_.
+* `put_subscription_filter <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.put_subscription_filter>`_.
 
-* `delete_subscription_filter <https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.delete_subscription_filter>`_.
+* `delete_subscription_filter <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.delete_subscription_filter>`_.
 
 For more information about CloudWatch Logs subscriptions, see 
 Real-time `Processing of Log Data with Subscriptions <http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions.html>`_ 
@@ -41,7 +41,7 @@ in the Amazon CloudWatch Logs User Guide.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Tasks
+Prerequisite tasks
 ==================
 
 * Configure your AWS credentials, as described in :doc:`quickstart`.
@@ -68,7 +68,7 @@ Prerequisite Tasks
                  "Effect": "Allow",
                  "Action": [
                     "logs:CreateLogGroup",
-                    "logs:CrateLogStream",
+                    "logs:CreateLogStream",
                     "logs:PutLogEvents"
                  ],
                  "Resource": "arn:aws:logs:*:*:*"
@@ -85,7 +85,7 @@ Prerequisite Tasks
            ]
         }
  
-List Existing Subscription Filters
+List existing subscription filters
 ==================================
 
 List the subscription filters for the specified log group.
@@ -93,7 +93,7 @@ List the subscription filters for the specified log group.
 The example below shows how to:
  
 * List subscription filters using 
-  `get_paginator('describe_subscription_filters') <https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.get_paginator>`_.
+  `get_paginator('describe_subscription_filters') <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.get_paginator>`_.
   
 For more information about paginators see, :doc:`paginators`
 
@@ -115,15 +115,15 @@ Example
 
 
  
-Create a Subscription Filter
+Create a subscription filter
 ============================
 
-Create or update a subscription filter and associates it with the specified log group.
+Create or update a subscription filter and associate it with the specified log group.
 
 The example below shows how to:
  
 * Create a subscription filter using 
-  `put_subscription_filter <https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.put_subscription_filter>`_.
+  `put_subscription_filter <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.put_subscription_filter>`_.
  
 Example
 -------
@@ -144,13 +144,13 @@ Example
     )
 
  
-Delete a Subscription Filter
+Delete a subscription filter
 ============================
 
 The example below shows how to:
  
 * Delete a subscription filter. using 
-  `delete_subscription_filter <https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.delete_subscription_filter>`_.
+  `delete_subscription_filter <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.delete_subscription_filter>`_.
   
 Example
 -------

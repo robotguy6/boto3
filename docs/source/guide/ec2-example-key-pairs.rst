@@ -11,7 +11,7 @@
 .. _aws-boto-ec2-example-key-pairs:
 
 #################################
-Working with Amazon EC2 Key Pairs
+Working with Amazon EC2 key pairs
 #################################
 
 This Python example shows you how to:
@@ -22,7 +22,7 @@ This Python example shows you how to:
 
 * Delete an existing key pair
 
-The Scenario
+The scenario
 ============
 
 Amazon EC2 uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography 
@@ -32,11 +32,11 @@ public and private keys are known as a key pair.
 In this example, Python code is used to perform several Amazon EC2 key pair management 
 operations. The code uses the AWS SDK for Python to manage IAM access keys using these methods of the EC2 client class:
 
-* `describe_key_pairs <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_key_pairs>`_.
+* `describe_key_pairs <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_key_pairs>`_.
 
-* `create_key_pair <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.create_key_pair>`_.
+* `create_key_pair <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.create_key_pair>`_.
 
-* `delete_key_pair <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.delete_key_pair>`_.
+* `delete_key_pair <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.delete_key_pair>`_.
 
 For more information about the Amazon EC2 key pairs, see `Amazon EC2 Key Pairs <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>`_ 
 in the *Amazon EC2 User Guide for Linux Instances* 
@@ -45,12 +45,12 @@ in the *Amazon EC2 User Guide for Windows Instances*.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 To set up and run this example, you must first configure your AWS credentials, as described in :doc:`quickstart`.
     
-Describe Key Pairs
+Describe key pairs
 ==================
 
 Describe one or more of your key pairs.
@@ -58,7 +58,7 @@ Describe one or more of your key pairs.
 The example below shows how to:
  
 * Describe keypairs using 
-  `describe_key_pairs <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_key_pairs>`_.
+  `describe_key_pairs <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_key_pairs>`_.
  
 Example
 -------
@@ -72,7 +72,7 @@ Example
     print(response)
 
 
-Create a Key Pair
+Create a key pair
 =================
 
 Create a 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and displays 
@@ -82,7 +82,7 @@ PKCS#8 private key. If a key with the specified name already exists, Amazon EC2 
 The example below shows how to:
  
 * Create a 2048-bit RSA key pair with a specified name using 
-  `create_key_pair <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.create_key_pair>`_.
+  `create_key_pair <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.create_key_pair>`_.
   
 Example
 -------
@@ -96,7 +96,7 @@ Example
     print(response)
 
 
-Delete a Key Pair
+Delete a key pair
 =================
 
 Delete the specified key pair, by removing the public key from Amazon EC2.
@@ -104,7 +104,7 @@ Delete the specified key pair, by removing the public key from Amazon EC2.
 The example below shows how to:
  
 * Delete a key pair by removing the public key from Amazon EC2 using 
-  `delete_key_pair <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.delete_key_pair>`_.
+  `delete_key_pair <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.delete_key_pair>`_.
  
 Example
 -------

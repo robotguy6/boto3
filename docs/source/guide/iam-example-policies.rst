@@ -11,12 +11,12 @@
 .. _aws-boto3-iam-examples-policies:
 
 #########################
-Working with IAM Policies
+Working with IAM policies
 #########################
 
 This Python example shows you how to create and get IAM policies and attach and detach IAM policies from roles.
 
-The Scenario
+The scenario
 ============
 
 You grant permissions to a user by creating a policy, which is a document that lists the actions 
@@ -28,25 +28,25 @@ In this example, Python code used to manage policies in IAM. The code uses the
 Amazon Web Services (AWS) SDK for Python to create and delete policies as well as attaching and 
 detaching role policies using these methods of the IAM client class:
 
-* `create_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.create_policy>`_.
+* `create_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.create_policy>`_.
 
-* `get_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.get_policy>`_.
+* `get_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.get_policy>`_.
 
-* `attach_role_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.attach_role_policy>`_.
+* `attach_role_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.attach_role_policy>`_.
 
-* `detach_role_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.detach_role_policy>`_.
+* `detach_role_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.detach_role_policy>`_.
     
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
 For more information about IAM policies, see `Overview of Access Management: Permissions and Policies <http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html>`_ 
 in the IAM User Guide.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 To set up and run this example, you must first configure your AWS credentials, as described in :doc:`quickstart`.
 
-Create an IAM Policy
+Create an IAM policy
 ====================
 
 Create a new managed policy for your AWS account.
@@ -59,7 +59,7 @@ in the *IAM User Guide*.
 The example below shows how to:
  
 * Create a new managed policy using 
-  `create_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.create_policy>`_.
+  `create_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.create_policy>`_.
  
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
  
@@ -103,7 +103,7 @@ Example
     )
     print(response)
 
-Get an IAM Policy
+Get an IAM policy
 =================
 
 Get information about the specified managed policy, including the policy's default version and 
@@ -119,7 +119,7 @@ or :code:`get_role_policy` API.
 The example below shows how to:
  
 * Get information about a managed policy using 
-  `get_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.get_policy>`_.
+  `get_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.get_policy>`_.
  
 Example
 -------
@@ -140,7 +140,7 @@ Example
 
 
 
-Attach a Managed Role Policy
+Attach a managed role policy
 ============================
 
 When you attach a managed policy to a role, the managed policy becomes part of the role's permission 
@@ -153,7 +153,7 @@ Use this API to attach a managed policy to a role. To embed an inline policy in 
 The example below shows how to:
  
 * Attach a managed policy to an IAM role. using 
-  `attach_role_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.attach_role_policy>`_.
+  `attach_role_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.attach_role_policy>`_.
   
 Example
 -------
@@ -173,7 +173,7 @@ Example
 
 
 
-Detach a Managed Role Policy
+Detach a managed role policy
 ============================
 
 Detach the specified managed policy from the specified role.
@@ -186,7 +186,7 @@ in the *IAM User Guide*.
 The example below shows how to:
  
 * Detach a managed role policy using 
-  `detach_role_policy <https://boto3.readthedocs.io/en/latest/reference/services/iam.html#IAM.Client.detach_role_policy>`_.
+  `detach_role_policy <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html#IAM.Client.detach_role_policy>`_.
  
 Example
 -------

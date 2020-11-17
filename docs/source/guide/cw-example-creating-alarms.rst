@@ -11,7 +11,7 @@
 .. _aws-boto3-cw-creating-alarms:   
 
 ####################################
-Creating Alarms in Amazon CloudWatch
+Creating alarms in Amazon CloudWatch
 ####################################
 
 This Python example shows you how to:
@@ -20,38 +20,38 @@ This Python example shows you how to:
 
 * Create and delete a CloudWatch alarm
 
-The Scenario
+The scenario
 ============
 
 An alarm watches a single metric over a time period you specify, and performs one or more actions 
 based on the value of the metric relative to a given threshold over a number of time periods.
 
 In this example, Python code is used to create alarms in CloudWatch. The code 
-uses the uses AWS SDK for Python to create alarms using these methods of the AWS.CloudWatch client class:
+uses the AWS SDK for Python to create alarms using these methods of the AWS.CloudWatch client class:
 
-* `paginate(StateValue='INSUFFICIENT_DATA') <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.paginate>`_.
+* `paginate(StateValue='INSUFFICIENT_DATA') <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.paginate>`_.
 
-* `put_metric_alarm <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
+* `put_metric_alarm <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
 
-* `delete_alarms <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.delete_alarms>`_.
+* `delete_alarms <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.delete_alarms>`_.
 
 For more information about CloudWatch alarms, see `Creating Amazon CloudWatch Alarms <http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html>`_ 
 in the *Amazon CloudWatch User Guide*.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 To set up and run this example, you must first configure your AWS credentials, as described in :doc:`quickstart`.
 
-Describe Alarms
+Describe alarms
 ===============
 
 The example below shows how to:
  
 * List metric alarms for insufficient data using 
-  `paginate(StateValue='INSUFFICIENT_DATA') <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.paginate>`_.
+  `paginate(StateValue='INSUFFICIENT_DATA') <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.paginate>`_.
  
 For more information about paginators see, :doc:`paginators`
  
@@ -70,7 +70,7 @@ Example
     for response in paginator.paginate(StateValue='INSUFFICIENT_DATA'):
         print(response['MetricAlarms'])
  
-Create an Alarm for a CloudWatch Metric Alarm
+Create an alarm for a CloudWatch Metric alarm
 =============================================
 
 Create or update an alarm and associate it with the specified metric alarm. Optionally, this operation 
@@ -86,7 +86,7 @@ the previous configuration of the alarm.
 The example below shows how to:
  
 * Create or update a metric alarm using 
-  `put_metric_alarm <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
+  `put_metric_alarm <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_alarm>`_.
   
 Example
 -------
@@ -120,7 +120,7 @@ Example
     )
 
  
-Delete an Alarm
+Delete an alarm
 ===============
 
 Delete the specified alarms. In the event of an error, no alarms are deleted.
@@ -128,7 +128,7 @@ Delete the specified alarms. In the event of an error, no alarms are deleted.
 The example below shows how to:
  
 * Delete a metric alarm using 
-  `delete_alarms <https://boto3.readthedocs.io/en/latest/reference/services/cloudwatch.html#CloudWatch.Client.delete_alarms>`_.
+  `delete_alarms <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.delete_alarms>`_.
   
 Example
 -------

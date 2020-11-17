@@ -1,5 +1,5 @@
 For more information, please see the official docs at
-https://boto3.readthedocs.io/
+https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
 
 Contributing Code
 -----------------
@@ -31,7 +31,7 @@ ideal report includes:
 -  If relevant, including the versions of your:
 
    -  Python interpreter
-   -  Boto 3
+   -  Boto3
    -  Optionally of the other dependencies involved (e.g. Botocore)
 
 -  If possible, create a pull request with a (failing) test case

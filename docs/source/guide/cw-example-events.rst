@@ -11,7 +11,7 @@
 .. _aws-boto3-cw-events:   
 
 ##########################################
-Sending Events to Amazon CloudWatch Events
+Sending events to Amazon CloudWatch Events
 ##########################################
 
 This Python example shows you how to:
@@ -22,21 +22,21 @@ This Python example shows you how to:
 
 * Send events that are matched to targets for handling
 
-The Scenario
+The scenario
 ============
 
 CloudWatch Events delivers a near real-time stream of system events that describe changes in 
 Amazon Web Services (AWS) resources to any of various targets. Using simple rules, you can match 
 events and route them to one or more target functions or streams.
 
-In this example, Python code is used to send events to CloudWatch Events. The code uses the uses the 
+In this example, Python code is used to send events to CloudWatch Events. The code uses the
 AWS SDK for Python to manage instances using these methods of the CloudWatchEvents client class:
 
-* `put_rule <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.put_rule>`_.
+* `put_rule <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.put_rule>`_.
 
-* `put_targets <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.put_targets>`_.
+* `put_targets <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.put_targets>`_.
 
-* `put_events <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.put_events>`_.
+* `put_events <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.put_events>`_.
 
 For more information about CloudWatch Events, see 
 `Adding Events with PutEvents <http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/AddEventsPutEvents.html>`_ 
@@ -44,7 +44,7 @@ in the *Amazon CloudWatch Events User Guide*.
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 * Configure your AWS credentials, as described in :doc:`quickstart`.
@@ -98,16 +98,16 @@ Use the following trust relationship when creating the IAM role.
         }
 
 
-Create a Scheduled Rule
+Create a scheduled rule
 =======================
 
 Create or update the specified rule. Rules are enabled by default, or based on value of the state. 
-You can disable a rule using `DisableRule <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.disable_rule>`_.
+You can disable a rule using `DisableRule <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.disable_rule>`_.
 
 The example below shows how to:
  
 * Create a CloudWatch Events rule using 
-  `put_rule <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.put_rule>`_.
+  `put_rule <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.put_rule>`_.
  
 
 Example
@@ -131,8 +131,8 @@ Example
     print(response['RuleArn'])
 
  
-Add a Lambda Function Target
-============================
+Add an AWS Lambda function target
+=================================
 
 Add the specified targets to the specified rule, or update the targets if they are already 
 associated with the rule.
@@ -140,7 +140,7 @@ associated with the rule.
 The example below shows how to:
  
 * Add a target to a rule using 
-  `put_targets <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.put_targets>`_.
+  `put_targets <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.put_targets>`_.
  
 
 Example
@@ -166,7 +166,7 @@ Example
     print(response)
 
  
-Send Events
+Send events
 ===========
 
 Send custom events to Amazon CloudWatch Events so that they can be matched to rules.
@@ -174,7 +174,7 @@ Send custom events to Amazon CloudWatch Events so that they can be matched to ru
 The example below shows how to:
  
 * Send a custom event to CloudWatch Events using 
-  `put_events <https://boto3.readthedocs.io/en/latest/reference/services/events.html#CloudWatchEvents.Client.put_events>`_.
+  `put_events <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/events.html#CloudWatchEvents.Client.put_events>`_.
  
 Example
 -------

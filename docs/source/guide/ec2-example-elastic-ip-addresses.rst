@@ -11,7 +11,7 @@
 .. _aws-boto-ec2-example-elastic-ip-addresses:
 
 ########################################
-Using Elastic IP Addresses in Amazon EC2
+Using Elastic IP addresses in Amazon EC2
 ########################################
 
 This Python example shows you how to:
@@ -22,7 +22,7 @@ This Python example shows you how to:
 
 * Release an Elastic IP address
 
-The Scenario
+The scenario
 ============
 
 An Elastic IP address is a static IP address designed for dynamic cloud computing. An Elastic IP 
@@ -34,11 +34,11 @@ In this example, Python code performs several Amazon EC2 operations involving El
 The code uses the AWS SDK for Python to manage IAM access keys using these methods of the EC2
 client class:
 
-* `describe_addresses <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_addresses>`_.
+* `describe_addresses <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_addresses>`_.
 
-* `allocate_address <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.allocate_address>`_.
+* `allocate_address <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.allocate_address>`_.
 
-* `release_address <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.release_address>`_.
+* `release_address <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.release_address>`_.
 
 For more information about Elastic IP addresses in Amazon EC2, see 
 `Elastic IP Addresses <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html>`_ 
@@ -48,12 +48,12 @@ Prerequisite Tasks
 
 All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
-Prerequisite Task
+Prerequisite tasks
 =================
 
 To set up and run this example, you must first configure your AWS credentials, as described in :doc:`quickstart`.
 
-Describe Elastic IP Addresses
+Describe Elastic IP addresses
 =============================
 
 An Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP 
@@ -63,7 +63,7 @@ an instance or software by rapidly remapping the address to another instance in 
 The example below shows how to:
  
 * Describe Elastic IP addresses using 
-  `describe_addresses <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_addresses>`_.
+  `describe_addresses <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.describe_addresses>`_.
  
 Example
 -------
@@ -80,7 +80,7 @@ Example
     response = ec2.describe_addresses(Filters=filters)
     print(response)
 
-Allocate and Associate an Elastic IP Address with an Amazon EC2 Instance
+Allocate and associate an Elastic IP address with an Amazon EC2 instance
 ========================================================================
 
 An *Elastic IP address* is a static IPv4 address designed for dynamic cloud computing. An Elastic IP 
@@ -90,7 +90,7 @@ an instance or software by rapidly remapping the address to another instance in 
 The example below shows how to:
  
 * Acquire an Elastic IP address using 
-  `allocate_address <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.allocate_address>`_.
+  `allocate_address <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.allocate_address>`_.
  
 Example
 -------
@@ -112,7 +112,7 @@ Example
 
 
  
-Release an Elastic IP Address
+Release an Elastic IP address
 =============================
 
 After releasing an Elastic IP address, it is released to the IP address pool and might be unavailable 
@@ -123,7 +123,7 @@ error if the address is already allocated to another AWS account.
 The example below shows how to:
  
 * Release the specified Elastic IP address using 
-  `release_address <https://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.release_address>`_.
+  `release_address <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.Client.release_address>`_.
  
 Example
 -------

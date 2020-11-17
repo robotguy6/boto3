@@ -1,29 +1,24 @@
 ===============================
-Boto 3 - The AWS SDK for Python
+Boto3 - The AWS SDK for Python
 ===============================
 
-|Build Status| |Docs| |Version| |Gitter|
+|Build Status| |Version| |Gitter|
 
 Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for
 Python, which allows Python developers to write software that makes use
 of services like Amazon S3 and Amazon EC2. You can find the latest, most
-up to date, documentation at `Read the Docs`_, including a list of
-services that are supported. To see only those features which have been
-released, check out the `stable docs`_.
+up to date, documentation at our `doc site`_, including a list of
+services that are supported.
 
 
 .. _boto: https://docs.pythonboto.org/
-.. _`stable docs`: https://boto3.readthedocs.io/en/stable/
-.. _`Read the Docs`: https://boto3.readthedocs.io/en/latest/
+.. _`doc site`: https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
 .. |Build Status| image:: http://img.shields.io/travis/boto/boto3/develop.svg?style=flat
     :target: https://travis-ci.org/boto/boto3
     :alt: Build Status
 .. |Gitter| image:: https://badges.gitter.im/boto/boto3.svg
    :target: https://gitter.im/boto/boto3
    :alt: Gitter
-.. |Docs| image:: https://readthedocs.org/projects/boto3/badge/?version=latest&style=flat
-    :target: https://boto3.readthedocs.io/en/latest/
-    :alt: Read the docs
 .. |Downloads| image:: http://img.shields.io/pypi/dm/boto3.svg?style=flat
     :target: https://pypi.python.org/pypi/boto3/
     :alt: Downloads
@@ -34,13 +29,28 @@ released, check out the `stable docs`_.
     :target: https://github.com/boto/boto3/blob/develop/LICENSE
     :alt: License
 
-Quick Start
------------
-First, install the library and set a default region:
+Getting Started
+---------------
+Assuming that you have Python and ``virtualenv`` installed, set up your environment and install the required dependencies like this or you can install the library using ``pip``:
 
 .. code-block:: sh
 
-    $ pip install boto3
+    $ git clone https://github.com/boto/boto3.git
+    $ cd boto3
+    $ virtualenv venv
+    ...
+    $ . venv/bin/activate
+    $ python -m pip install -r requirements.txt
+    $ python -m pip install -e .
+
+.. code-block:: sh
+
+    $ python -m pip install boto3
+
+    
+Using Boto3
+~~~~~~~~~~~~~~
+After installing boto3 
 
 Next, set up credentials (in e.g. ``~/.aws/credentials``):
 
@@ -54,8 +64,10 @@ Then, set up a default region (in e.g. ``~/.aws/config``):
 
 .. code-block:: ini
 
-    [default]
-    region=us-east-1
+   [default]
+   region=us-east-1
+    
+Other credentials configuration method can be found `here <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html>`__
 
 Then, from a Python interpreter:
 
@@ -65,25 +77,6 @@ Then, from a Python interpreter:
     >>> s3 = boto3.resource('s3')
     >>> for bucket in s3.buckets.all():
             print(bucket.name)
-
-Development
------------
-
-Getting Started
-~~~~~~~~~~~~~~~
-Assuming that you have Python and ``virtualenv`` installed, set up your
-environment and install the required dependencies like this instead of
-the ``pip install boto3`` defined above:
-
-.. code-block:: sh
-
-    $ git clone https://github.com/boto/boto3.git
-    $ cd boto3
-    $ virtualenv venv
-    ...
-    $ . venv/bin/activate
-    $ pip install -r requirements.txt
-    $ pip install -e .
 
 Running Tests
 ~~~~~~~~~~~~~
@@ -105,17 +98,6 @@ You can also run individual tests with your default Python version:
 
     $ nosetests tests/unit
 
-Generating Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~
-Sphinx is used for documentation. You can generate HTML locally with the
-following:
-
-.. code-block:: sh
-
-    $ pip install -r requirements-docs.txt
-    $ cd docs
-    $ make html
-
 
 Getting Help
 ------------
@@ -128,3 +110,18 @@ help:
 * Come join the AWS Python community chat on `gitter <https://gitter.im/boto/boto3>`__
 * Open a support ticket with `AWS Support <https://console.aws.amazon.com/support/home#/>`__
 * If it turns out that you may have found a bug, please `open an issue <https://github.com/boto/boto3/issues/new>`__
+
+
+Contributing
+------------
+
+We value feedback and contributions from our community. Whether it's a bug report, new feature, correction, or additional documentation, we welcome your issues and pull requests. Please read through this `CONTRIBUTING <https://github.com/boto/boto3/blob/develop/CONTRIBUTING.rst>`__ document before submitting any issues or pull requests to ensure we have all the necessary information to effectively respond to your contribution.
+
+
+More Resources
+--------------
+
+* `NOTICE <https://github.com/boto/boto3/blob/develop/NOTICE>`__
+* `Changelog <https://github.com/boto/boto3/blob/develop/CHANGELOG.rst>`__
+* `License <https://github.com/boto/boto3/blob/develop/LICENSE.txt>`__
+
